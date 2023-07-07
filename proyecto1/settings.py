@@ -83,20 +83,20 @@ WSGI_APPLICATION = 'proyecto1.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', #for windows
-        'ENGINE': 'mysql.connector.django', #for mac
-        'NAME': 'libreria',
-        'USER': 'root',
-        'PASSWORD': 'leandro123',
-        'HOST': '127.0.0.1',
-        'PORT': '6000'
-    }
-    # 'default': dj_database_url.config(
-    #     # Feel free to alter this value to suit your needs.
-    #     default='postgresql://postgres:postgres@localhost:5432/mysite',
-    #     conn_max_age=600
-    # )
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql', #for windows
+    #     'ENGINE': 'mysql.connector.django', #for mac
+    #     'NAME': 'libreria',
+    #     'USER': 'root',
+    #     'PASSWORD': 'leandro123',
+    #     'HOST': '127.0.0.1',
+    #     'PORT': '6000'
+    # }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        conn_max_age=600
+    )
 }
 
 # Password validation
